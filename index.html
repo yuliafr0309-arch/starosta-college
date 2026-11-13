@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#f5f7fb"><title>Староста College</title><script src="https://telegram.org/js/telegram-web-app.js"></script><link rel="stylesheet" href="/static/style.css"></head>
+<body><div class="app">
+<header><div><div class="eyebrow">COLLEGE • MINI APP</div><h1>Привет, <span id="hello">студент</span> 👋</h1><p id="groupLabel">Твоя учебная группа — в одном месте</p></div><div class="avatar" id="avatar">С</div></header>
+<div id="notice" class="notice hidden"></div>
+<section id="setup" class="panel hidden"><h2>Начнём с группы</h2><p class="muted">Создай группу как староста или присоединись по коду приглашения.</p><input id="groupTitle" placeholder="Например, ИС-1-26"><button id="createGroup" class="primary">Создать группу</button><div class="or">или</div><input id="joinCode" placeholder="Код приглашения"><button id="joinGroup" class="secondary">Присоединиться</button></section>
+<nav id="tabs" class="tabs hidden"><button class="tab active" data-tab="home">Обзор</button><button class="tab" data-tab="schedule">Расписание</button><button class="tab" data-tab="tasks">Задания</button><button class="tab" data-tab="group">Группа</button></nav>
+<main id="content" class="hidden">
+<section class="view active" id="view-home"><div class="hero"><div><span class="pill">ВАША ГРУППА</span><h2 id="heroGroup">College</h2><p id="memberCount">Участники группы</p></div><div class="heroIcon">✦</div></div>
+<div class="sectionHead"><h3>Быстрый доступ</h3><span class="muted small">всё важное</span></div><div class="tiles"><button class="tile" data-go="schedule"><span>▦</span><b>Расписание</b><small>Занятия на неделе</small></button><button class="tile" data-go="tasks"><span>✎</span><b>Домашние задания</b><small>Что нужно выполнить</small></button><button class="tile" data-go="attendance"><span>✓</span><b>Посещаемость</b><small>Журнал группы</small></button><button class="tile" data-go="announcements"><span>◉</span><b>Объявления</b><small>Новости группы</small></button></div>
+<div class="sectionHead"><h3>Последние объявления</h3></div><div id="homeAnnouncements" class="stack"></div></section>
+<section class="view" id="view-schedule"><div class="sectionHead"><h2>Расписание</h2><button class="smallBtn manager hidden" id="addLesson">＋ Добавить</button></div><div id="scheduleList" class="stack"></div></section>
+<section class="view" id="view-tasks"><div class="sectionHead"><h2>Домашние задания</h2><button class="smallBtn manager hidden" id="addTask">＋ Добавить</button></div><div id="tasksList" class="stack"></div></section>
+<section class="view" id="view-group"><div class="sectionHead"><h2>Моя группа</h2></div><div class="panel"><p class="muted small">Код приглашения</p><div class="codeRow"><strong id="inviteCode">—</strong><button id="copyCode" class="smallBtn">Копировать</button></div></div><div id="membersList" class="stack"></div></section>
+<section class="view" id="view-attendance"><div class="sectionHead"><h2>Посещаемость</h2></div><div id="attendanceList" class="stack"></div><p class="muted small">Отметки в журнал вносит староста или заместитель.</p></section>
+<section class="view" id="view-announcements"><div class="sectionHead"><h2>Объявления</h2><button class="smallBtn manager hidden" id="addAnnouncement">＋ Добавить</button></div><div id="announcementsList" class="stack"></div></section>
+</main>
+<footer>Староста College <span>• бесплатно</span></footer></div><div id="modal" class="modal hidden"><div class="modalCard"><button class="close" id="closeModal">×</button><div id="modalBody"></div></div></div><script src="/static/app.js"></script></body></html>
